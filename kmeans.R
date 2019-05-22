@@ -34,7 +34,7 @@ fviz_cluster(kmeans.proc, data = sd)
 #validasi dengan DBI (Davies-Bouldin Index) (6)
 library(NbClust)
 DBIKMeans<-NbClust(sd, distance = "euclidean",
-                    min.nc = 3, max.nc = 3,
+                    min.nc = 2, max.nc = 5,
                     index = "db", method = "complete")
 DBIKMeans$Best.nc #rekomendasi jumlah kluster terbaik dan nilai validasinya
 DBIKMeans$All.index #banyaknya jumlah kluster dan nilai validasinya masing-masing
@@ -42,7 +42,7 @@ DBIKMeans$All.index #banyaknya jumlah kluster dan nilai validasinya masing-masin
 #validasi dengan SI (Silhouette Index) (6)
 library(NbClust)
 SIKMeans<-NbClust(sd, distance = "euclidean",
-                    min.nc = 3, max.nc = 3,
+                    min.nc = 2, max.nc = 5,
                     index = "silhouette", method = "complete")
 SIKMeans$Best.nc #rekomendasi jumlah kluster terbaik dan nilai validasinya
 SIKMeans$All.index #banyaknya jumlah kluster dan nilai validasinya masing-masing
