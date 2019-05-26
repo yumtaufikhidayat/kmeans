@@ -1,4 +1,3 @@
-# kmeans
 Program K-Means dengan bahasa pemrograman R
 
 1. Dataset: Profil Kesehatan Penduduk Kabupaten/Kota Tahun 2017
